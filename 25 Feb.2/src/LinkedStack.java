@@ -30,6 +30,35 @@ public class LinkedStack implements MyStack {
 		size--;
 		return rtn.getData();
 	}
+	
+	public Integer readStack(int slot) {
+		//Node rtn = top;
+		//Node next = rtn.getNext();
+		
+		int rtn = 0;
+		
+		if (isEmpty()) {
+			return -999;
+		}
+		
+		Node n = top;
+		
+		int counter = -1;
+		
+		while (counter < slot) {
+			if (n == null) {
+				return -999;
+			}
+			rtn = n.getData();
+			n = n.getNext();
+			
+			counter++;
+		}
+
+		return rtn;
+
+		
+	}
 
 	@Override
 	public boolean isEmpty() {

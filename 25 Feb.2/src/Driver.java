@@ -9,7 +9,7 @@ public class Driver {
 	}
 	
 	public void doIt() {
-		ArrayStack stack = new ArrayStack();
+		LinkedStack stack = new LinkedStack();
 		
 		stack.push(10);
 		stack.push(20);
@@ -22,9 +22,13 @@ public class Driver {
 		System.out.println(stack);
 		System.out.println(stack.peek());
 		
-		stack.trimToSize();
+		//stack.trimToSize();
 		System.out.println(stack.isFull());
 		stack.push(70);
+		System.out.println(stack);
+		
+		
+		System.out.println(stack.readStack(78) + "");
 	}
 	
 
